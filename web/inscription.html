@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Inscription</title>
+        <link type="text/css" rel="stylesheet" href="form.css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+         <form method="post" action="etudiants">
+            <fieldset>
+                <legend>Inscription</legend>
+                <p>Vous pouvez vous inscrire via ce formulaire.</p>
+
+                 <label for="nom">Nom d'utilisateur<span class="requis">*</span></label>
+                <input type="text" id="nom" name="nom" value="" size="20" maxlength="20" />
+                <br />
+                <label for="nom">Prénom d'utilisateur <span class="requis">*</span></label>
+                <input type="text" id="prenom" name="prenom" value="" size="20" maxlength="60" />
+                <br />
+                <label for="nom">Adresse email <span class="requis">*</span></label>
+                <input type="text" id="email" name="email" value="" size="20" maxlength="60" />
+                <br />
+                <input type="submit" value="Sauvegarde" class="sansLabel" />
+                <br />
+            </fieldset>
+        </form>
+    </body>
+</html>
