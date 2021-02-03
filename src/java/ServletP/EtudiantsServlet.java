@@ -60,17 +60,18 @@ public class EtudiantsServlet extends HttpServlet {
             out.println("<th style=\"color:blue\">EMAIL</th>");
             
             try{
-        BufferedReader br = new BufferedReader(new FileReader("etudiants.csv"));
-        while((ligne = br.readLine()) != null){
-            String[] donne = ligne.split(",");
-            
-            out.println("<tr>");
-            out.println("<td>"+donne[0]+"</td>");
-            out.println("<td>"+donne[1]+"</td>");
-            out.println("<td>"+donne[2]+"</td>");
-            out.println("</tr>");
-            out.println("</table>");
-        }
+                
+                BufferedReader br = new BufferedReader(new FileReader("etudiants.csv"));
+                while((ligne = br.readLine()) != null){
+                String[] donne = ligne.split(",");
+                
+                out.println("<tr>");
+                out.println("<td>"+donne[0]+"</td>"); 
+                out.println("<td>"+donne[1]+"</td>");
+                out.println("<td>"+donne[2]+"</td>");
+                out.println("</tr>");}
+                out.println("</table>");
+        
         }catch(FileNotFoundException e){
             e.printStackTrace();
         }
@@ -114,7 +115,7 @@ public class EtudiantsServlet extends HttpServlet {
         String filepath = "etudiants.csv";
         saveRecord( nom,  prenom,  email, filepath);
         
-        
+        doGet(request, response);
         
         
         
