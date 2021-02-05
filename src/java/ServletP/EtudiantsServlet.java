@@ -61,8 +61,8 @@ public class EtudiantsServlet extends HttpServlet {
             
             try{
                 
-                BufferedReader br = new BufferedReader(new FileReader("etudiants.csv"));
-                while((ligne = br.readLine()) != null){
+                BufferedReader tr = new BufferedReader(new FileReader("etudiants.csv"));
+                while((ligne = tr.readLine()) != null){
                 String[] donne = ligne.split(",");
                 
                 out.println("<tr>");
@@ -113,14 +113,14 @@ public class EtudiantsServlet extends HttpServlet {
         String prenom = request.getParameter( CHAMP_PRENOM );
         String email = request.getParameter( CHAMP_EMAIL );
         String filepath = "etudiants.csv";
-        saveRecord( nom,  prenom,  email, filepath);
+        enregistrer( nom,  prenom,  email, filepath);
         
         doGet(request, response);
         
         
         
     }
-    public static void saveRecord(String nom, String prenom, String email,String filepath)
+    public static void enregistrer(String nom, String prenom, String email,String filepath)
         {
             filepath="etudiants.csv";
             try
